@@ -24,3 +24,6 @@ jobs:
       
       - name: Test with pytest
         run: pytest
+
+      - name: Package application
+        run: zip -r polling-system.zip *.py *.txt .github/

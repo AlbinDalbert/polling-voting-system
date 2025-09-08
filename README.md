@@ -46,7 +46,9 @@ curl -X GET http://127.0.0.1:5000/polls
 ```
 
 ## Build and Run 
-It's a simple flask add. so intsalling the dependencies in `requirements.txt` and running `flask run` is sufficiant.  
+It's a simple flask add. so intsalling the dependencies in `requirements.txt` and running `flask run` is sufficiant. The application will be reachable at http://127.0.0.1:5000
+
+For the closure of expired polls, a scheduled task has to be setup in the given deployment environtment (e.g. cron for linux). setting that up to run `scheduler.py` will make sure expired polls are getting closed.
 
 ## CI/CD
 Using GitHub Actions, the test suite is automatically executed and ran on push/pull request. The pipeline is defined in `/.github/workflows`
