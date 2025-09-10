@@ -6,7 +6,7 @@ A backend application for running polls where users can vote and view results. B
 
 ## Endpoints
 ### [POST] /polls
-creat a new poll.
+create a new poll.
 Example:
 ```
 curl -X POST http://127.0.0.1:5000/polls \
@@ -76,6 +76,6 @@ For the closure of expired polls, a scheduled task has to be setup in the given 
 
 ## CI/CD
 Using GitHub Actions, the test suite is automatically executed and ran on push/pull request. The pipeline is defined in `/.github/workflows`
-
+It starts by running the `pytest` and after that, it packages the application into a .zip file.
 ## Decisions
-For data storage and persistance, json was picked because of the 'multiple choice' requirement in th:e polls. The flexibility of simply using a json file makes this easier to manage. Whiles other noSQL databases can do this aswell, it would be unnessecery complexity to the scope of this project.
+For data storage and persistance, json was picked because of the 'multiple choice' requirement in the polls. The flexibility of simply using a json file makes this easier to manage. Whiles other noSQL databases can do this aswell, it would be unnessecery complexity to the scope of this project.

@@ -1,5 +1,3 @@
-# models.py
-
 from datetime import datetime, timedelta
 import uuid
 
