@@ -46,7 +46,31 @@ curl -X GET http://127.0.0.1:5000/polls
 ```
 
 ## Build and Run 
-It's a simple flask add. so intsalling the dependencies in `requirements.txt` and running `flask run` is sufficiant. The application will be reachable at http://127.0.0.1:5000
+*(these instructions are aimed for an linux environment)*
+
+Prerequisites
+- Python 3.12+
+- pip
+
+Clone the repository and enter the directory.
+```
+git clone https://github.com/AlbinDalbert/polling-voting-system.git
+cd simple-expense-tracker
+```
+
+Create a virtual environment and intall the dependencies.
+```
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+Run the application:
+```
+flask run
+```
+And it can now be reached at `http://127.0.0.1:5000`
 
 For the closure of expired polls, a scheduled task has to be setup in the given deployment environtment (e.g. cron for linux). setting that up to run `scheduler.py` will make sure expired polls are getting closed.
 
